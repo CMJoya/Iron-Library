@@ -1,7 +1,7 @@
+<%= link_to "Edit", edit_book_path(id: @book.id), class: "btn btn-default" %>
+<%= link_to "Delete", book_path(id: @book.id), method: :delete, class: "btn-danger", data: {confirm: "Are You Sure?"} %>
 
 <div>
-
   <%= @book.title %>
   <%= image_tag @book.photo_url %>
-
 </div>

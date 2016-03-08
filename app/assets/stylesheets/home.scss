@@ -1,3 +1,22 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #2C3E50;
+  padding: 15px;
+}
+
+.books img {
+  width:340px;
+  height:420px;
+}
+
+.books {
+  margin-top:20px;
+}
+
+.outer {
+  display:flex;
+  flex-wrap: wrap;
+}

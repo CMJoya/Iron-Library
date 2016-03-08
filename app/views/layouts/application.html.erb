@@ -8,19 +8,24 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 </head>
+
+<body>
 <header>
   <nav>
     <%= link_to root_path do %>
     <i class = "fa fa-home fa-2x"></i>
+    <%= link_to "Books", books_path %>
+    <%= link_to "New Book", new_book_path %>
+    <%= link_to "Authors", authors_path %>
+    <%= link_to "New Author", new_author_path %>
     <% end %>
   </nav>
 </header>
-
-<body>
-
+ <div class="container">
 <%= yield %>
+
+</div>
 
 </body>
 </html>
