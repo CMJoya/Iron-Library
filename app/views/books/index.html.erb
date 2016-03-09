@@ -6,7 +6,7 @@
   <div class="books">
     <%= link_to book_path(id: book.id) do %>
     <p><%= book.title %></p>
-    <p><%= book.price %></p>
+    <p>$<%= book.price %></p>
     <img src=" <%=book.photo_url%>" alt=""/>
     <% end %>
   </div>

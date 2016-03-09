@@ -10,7 +10,7 @@
     <p><%= author.bio %></p>
 
     <%= link_to "Edit", edit_author_path(id: author.id), class: "btn btn-default" %>
-    <%= link_to "Delete", author_path(id: author.id), method: :delete, class: "btn-danger", data: {confirm: "Are You Sure?"} %>
+    <%= link_to "Delete", author_path(id: author.id), method: :delete, class: "btn btn-danger", data: {confirm: "Are You Sure?"} %>
 
   </div>
 

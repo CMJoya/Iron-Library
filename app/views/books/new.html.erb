@@ -13,6 +13,6 @@
   <%= f.label :author %>
   <%= f.collection_select :author_id, Author.all, :id, :full_name, {prompt: true},  {class: "form-control"} %>
 </div>
-<%= f.submit class:"submit"%>
+<%= f.submit class:"btn btn-primary"%>
 
 <% end %>
