@@ -1,9 +1,17 @@
+<div class="page-header">
+  <h1>Authors</h1>
+</div>
 
 <div class="outer">
-<% @authors.each do |f| %>
-<div class="books">
+  <% @authors.each do |author| %>
+  <div class="books">
 
-  <p><%= f.full_name %></p>
-  <p><%= f.bio %></p>
+    <p><%= author.full_name %></p>
+    <p><%= author.bio %></p>
+
+    <%= link_to "Edit", edit_author_path(id: author.id), class: "btn btn-default" %>
+    <%= link_to "Delete", author_path(id: author.id), method: :delete, class: "btn-danger", data: {confirm: "Are You Sure?"} %>
+
+  </div>
+
   <% end %>
-</div>

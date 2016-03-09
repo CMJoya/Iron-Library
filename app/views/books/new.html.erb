@@ -1,3 +1,7 @@
+<div class="page-header">
+  <h1>New Book</h1>
+</div>
+
 <%= form_for @book do |f| %>
 <%= f.label :title %>
 <%= f.text_area :title, class: "form-control" %>
@@ -6,9 +10,9 @@
 <%= f.label :price %>
 <%= f.text_area :price, class: "form-control" %>
 <div class="form-group">
-    <%= f.label :author %>
-    <%= f.collection_select :author_id, Author.all, :id, :full_name, {prompt: true},  {class: "form-control"} %>
-  </div>
+  <%= f.label :author %>
+  <%= f.collection_select :author_id, Author.all, :id, :full_name, {prompt: true},  {class: "form-control"} %>
+</div>
 <%= f.submit class:"submit"%>
 
-  <% end %>
+<% end %>

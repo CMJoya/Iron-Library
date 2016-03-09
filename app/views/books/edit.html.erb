@@ -1,3 +1,6 @@
+<div class="page-header">
+  <h1>Edit Book</h1>  
+</div>
 <%= form_for @book, url: book_path(id: @book.id) do |f| %>
 <%= f.label :title %>
 <%= f.text_area :title, class: "form-control" %>

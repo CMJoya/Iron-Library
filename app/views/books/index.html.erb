@@ -1,9 +1,13 @@
-<div class="outer">
-<% @book.each do |book| %>
-<div class="books">
-  <%= link_to book_path(id: book.id) do %>
-  <p><%= book.title %></p>
-  <img src=" <%=book.photo_url%>" alt="" />
-  <% end %>
+<div class="page-header">
+  <h1>Books</h1>
 </div>
-<% end %>
+<div class="outer">
+  <% @book.each do |book| %>
+  <div class="books">
+    <%= link_to book_path(id: book.id) do %>
+    <p><%= book.title %></p>
+    <p><%= book.price %></p>
+    <img src=" <%=book.photo_url%>" alt=""/>
+    <% end %>
+  </div>
+  <% end %>

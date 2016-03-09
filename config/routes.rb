@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get 'authors' => 'authors#index', as: :authors
   get 'authors/new' => 'authors#new', as: :new_author
   get 'authors/:id' => 'authors#show', as: :author
+  get 'authors/:id/edit' => 'authors#edit', as: :edit_author
   post 'authors' => 'authors#create'
+  delete 'authors/:id' => 'authors#delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

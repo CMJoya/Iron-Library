@@ -24,4 +24,15 @@ class AuthorsController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @author = Author.find_by id: params[:id]
+  end
+
+  def delete
+    @author = Author.find_by id: params[:id]
+    @author.destroy
+    redirect_to "/authors"
+  end
+
 end
