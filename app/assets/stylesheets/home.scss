@@ -8,9 +8,10 @@ header {
   a {
     flex: 1;
     margin: 0 30px;
+    color: white;
     &:hover {
       text-decoration: none;
-      color: white;
+      color: yellow;
     }
   }
 }
