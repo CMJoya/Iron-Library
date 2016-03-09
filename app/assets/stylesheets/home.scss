@@ -3,8 +3,17 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #2C3E50;
+  background-color: black;
   padding: 15px;
+  a {
+    flex: 1;
+    margin: 0 30px;
+    color: gold;
+    &:hover {
+      text-decoration: none;
+      color: gray;
+    }
+  }
 }
 
 .books img {
@@ -19,4 +28,5 @@ header {
 .outer {
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
