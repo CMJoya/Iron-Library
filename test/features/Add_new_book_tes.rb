@@ -14,7 +14,7 @@ test "Can Add New Book" do
    within("#new_book") do
    fill_in "Title", with: "BATMAN"
    fill_in "Price", with: "$17"
-   fill_in "Photo", with: "http://www.ultimatestock.co.uk/wp-content/uploads/2016/02/Modern-Romance-Written-By-Aziz-Ansari-500x600.jpg"
+   fill_in "Photo", with: "http://5625-presscdn-22-81.pagely.netdna-cdn.com/wp-content/uploads/2011/01/expensive-batman-comics-batman-11.jpg"
    select "Alan Moore", :from => "Author"
    click_button "Create Book"
 
