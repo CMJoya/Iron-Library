@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   get 'orders' => 'orders#index', as: :orders
   get 'orders/:id' => 'orders#show', as: :order
 
-  post 'cart' => 'carts#add_to_cart' as: :add_to_cart
-  get 'cart' => 'carts#view' as: :cart
+  post 'cart' => 'carts#add_to_cart', as: :add_to_cart
+  get 'cart' => 'carts#view', as: :cart
 
   get 'sessions/new' => 'sessions#new', as: :log_in
   post 'sessions/new' => 'sessions#create'
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   get 'checkout' => 'checkout#start', as: :checkout
   post 'checkout' => 'checkout#process_payment', as: :process_payment
 
-  get 'receipts/:id' => 'checkout#receipt', :as :receipt
+  get 'receipts/:id' => 'checkout#receipt', as: :receipt
 
 
 
