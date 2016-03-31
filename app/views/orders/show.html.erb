@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>Order <% @order.id %></h1>
+</div>
+
+<ul>
+  <li>
+    <strong>Purchase Date: </strong>: <%= local_time(@order.purchased_at) %>
+  </li>
+  <li>
+    <strong>Order ID: </strong>: <%= @order.id %>
+  </li>
+  <li>
+    <strong>Pruchase: </strong>: <%= @order.user.username %>|<%= @order.user.email %>
+  </li>
+  <li>
+    <strong>Total Price: </strong>: <%= @order.total_price %>
+  </li>
+</ul>
+
+<h3>Items</h3>
+
+<%= @order.orderitems.each do |orderitem| %>
+
+<%= @orderitem.book.name %>
+
+<p>
+  Total: <%= number_to_currency orderitem.total_price %>
+</p>
+<% end %>
