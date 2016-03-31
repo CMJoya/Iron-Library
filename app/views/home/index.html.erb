@@ -4,9 +4,9 @@
 
 <% if @current_user.present? %>
   <%= @current_user.username %>
-  <%= link_to "Log Out", log_out_path, method: :delete %>
+  <%= link_to "Log Out", log_out_path, method: :delete, class: "btn btn-success" %>
 <% else %>
-  <%= link_to "Log In", log_in_path, class: "btn btn-success btn-lg btn-block" %>
+  <%= link_to "Log In", log_in_path %>
 <% end %>
 
 

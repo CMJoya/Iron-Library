@@ -7,7 +7,7 @@ class CartsController < ApplicationController
   end
 
   def add_to_cart
-    @book = Book.find_by id: paramas[:book_id]
+    @book = Book.find_by id: params[:book_id]
 
     order = Order.find_by status: 'cart', user_id: @current_user.id
 
@@ -45,5 +45,11 @@ class CartsController < ApplicationController
 
   def view
     @order = Order.find_by status: 'cart', user_id: @current_user.id
+    if @order.nil?
+      @order = Order.new
+      @order.user = @current_user
+      @order.purchased_at = Time.now
+      @order.save
+    end
   end
 end

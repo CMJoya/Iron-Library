@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>Receipt #<% @order.id %></h1>
+</div>
+
+<ul>
+  <li>
+    <strong>Purchase Date: </strong>: <%= local_time(@order.purchased_at) %>
+  </li>
+  <li>
+    <strong>Order ID: </strong>: <%= @order.id %>
+  </li>
+  <li>
+    <strong>Purchaser: </strong> <%= @order.user.email %>
+  </li>
+  <li>
+    <strong>Total Price: </strong>
+    $<%= @order.total_price %>
+
+  </li>
+</ul>
+
+<h3>Items</h3>
+<%= @order.orderitems.each do |orderitem| %>
+  <%= orderitem.book.title %>
+  <%= orderitem.quantity %> at <%= orderitem.price %>
+
+  <p>
+    Total: <%= number_to_currency orderitem.total_price %>
+  </p>
+<% end %>

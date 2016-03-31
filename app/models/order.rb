@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
   end
 
   def desciption
-    "Order ##{id}.#{orderitems.map{ |oi| oi.product.name}.join(", ")}"
+    "Order ##{id}.#{orderitems.map{ |oi| oi.book.name}.join(", ")}"
 
   end
 

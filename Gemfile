@@ -58,3 +58,4 @@ end
 gem 'rails-erd'
 gem 'local_time'
 gem 'stripe'
+gem 'simple_form'
