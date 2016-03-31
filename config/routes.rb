@@ -22,9 +22,12 @@ Rails.application.routes.draw do
   post 'cart' => 'carts#add_to_cart', as: :add_to_cart
   get 'cart' => 'carts#view', as: :cart
 
-  get 'sessions/new' => 'sessions#new', as: :log_in
-  post 'sessions/new' => 'sessions#create'
-  delete 'session' => 'sessions#delete', as: :log_out
+  get 'log_in' => 'sessions#new', as: :log_in
+  post 'log_in' => 'sessions#create'
+  delete 'log_out' => 'sessions#delete', as: :log_out
+
+  get '/users/new' => 'users#new', as: :sign_up
+  post '/users' => 'users#create', as: :users
 
   delete 'cart' => 'carts#remove_from_cart', as: :remove_from_cart
 

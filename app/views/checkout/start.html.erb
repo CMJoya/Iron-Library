@@ -2,18 +2,46 @@
   <h1>Give Me You Money!</h1>
 </div>
 
-<%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
+<%= link_to '$$Buy$$', process_payment_path, method: :post, class: "btn btn-success" %>
 
-  <script>
+<h2>Your Items</h2>
 
-  </script>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Item
+      </th>
+      <th>
+        Quantity
+      </th>
+      <th>
+        Per Item Price
+      </th>
+      <th>
+        Total Price
+      </th>
+    </tr>
+  </thead>
+
+<tbody>
+  <% @order.orderitems.each do |orderitem| %>
+
+  <tr>
+    <td>
+      <%= orderitem.book.title %>
+    </td>
+    <td>
+      <%= orderitem.quantity %>
+    </td>
+    <td>
+      <%= orderitem.price %>
+    </td>
+    <td>
+      <%= number_to_currency orderitem.total_price %>
+    </td>
+  </tr>
+
   <% end %>
-
-  <% if false %>
-  <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
-
-    <span class="payment-errors"></span>
-
-    <div class="">
-
-    </div>
+</tbody>
+</table>
